@@ -11,7 +11,25 @@
             padding: 0;
             -webkit-tap-highlight-color: transparent;
         }
+        <script>
+    // Автозапуск тренажера при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Тренажер запущен!');
         
+        // Если есть кнопка старта - имитируем клик
+        const startBtn = document.getElementById('startBtn') || 
+                        document.querySelector('button');
+        
+        if (startBtn) {
+            startBtn.click();
+        }
+        
+        // Покажем сообщение о готовности
+        setTimeout(() => {
+            alert('Тренажер готов к работе!');
+        }, 500);
+    });
+</script>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -1425,4 +1443,5 @@
         }, false);
     </script>
 </body>
+
 </html>
